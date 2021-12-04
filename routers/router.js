@@ -1,6 +1,5 @@
 const { Router } = require('express');
 const router = Router();
-var app = require('./app');
 
 // var controllerUsuarios=require('../controllers/controllerUsuarios');
 // router.get('/prueba',controllerUsuarios.prueba);
@@ -11,7 +10,7 @@ var app = require('./app');
 // router.delete('/eliminar/:id',controllerUsuarios.deleteuser);
 
 var controllerPedidos=require('../controllers/controllerPedidos');
-app.get('/',controllerPedidos.index);
+router.get('/',controllerPedidos.index);
 // router.get('/',controllerPedidos.prueba);
 router.post('/crearp',controllerPedidos.savepedido);
 router.get('/verp/:id',controllerPedidos.buscarpedido);
