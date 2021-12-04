@@ -10,7 +10,7 @@ const router = Router();
 // router.delete('/eliminar/:id',controllerUsuarios.deleteuser);
 
 var controllerPedidos=require('../controllers/controllerPedidos');
-router.get('/pruebap',controllerPedidos.prueba);
+router.get('/',controllerPedidos.prueba);
 router.post('/crearp',controllerPedidos.savepedido);
 router.get('/verp/:id',controllerPedidos.buscarpedido);
 router.get('/vertodos',controllerPedidos.listarAllpedidos);
