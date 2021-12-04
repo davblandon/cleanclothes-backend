@@ -4,8 +4,8 @@
   "description": "Desarrollo de software( aplicativo web con enfoque en el modelo SPA ). ",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node index",
+    "dev": "nodemon index"
   },
   "author": "GRUPO 1 - MISION TIC 2022",
   "license": "ISC",
