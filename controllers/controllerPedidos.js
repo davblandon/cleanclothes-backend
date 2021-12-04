@@ -1,7 +1,7 @@
 var mongoose = require("../src/conexDB/conn");
 var Pedido = require("../models/pedidos");
 const Pedidos = require("../models/pedidos");
-const { isValidObjectId } = require("mongoose");
+const { path } = require("../app");
 
 function prueba(req, res) {
     res.status(200).send({
@@ -85,6 +85,10 @@ function deletepedido(req, res) {
         return res.json(pedido+" PEDIDO ELIMINADO ")
     })};
 
+function index(req,res){
+    res.sendFile(path.resolve('./public/index.html'))
+};
+
     module.exports = {
         prueba,
         savepedido,
@@ -92,4 +96,5 @@ function deletepedido(req, res) {
         listarAllpedidos,
         updatepedido,
         deletepedido,
+        index
     };

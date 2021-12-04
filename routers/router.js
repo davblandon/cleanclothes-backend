@@ -11,9 +11,7 @@ var app = require('./app');
 // router.delete('/eliminar/:id',controllerUsuarios.deleteuser);
 
 var controllerPedidos=require('../controllers/controllerPedidos');
-app.get('*',(req,res)=>{
-    res.sendFile(path.resolve('./public/index.html'))
-  });
+app.get('/',controllerPedidos.index);
 // router.get('/',controllerPedidos.prueba);
 router.post('/crearp',controllerPedidos.savepedido);
 router.get('/verp/:id',controllerPedidos.buscarpedido);
